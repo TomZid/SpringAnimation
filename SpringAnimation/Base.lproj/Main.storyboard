@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="portrait" translatesAutoresizingMaskIntoConstraints="NO" id="GUn-Zj-LEL">
+                                <rect key="frame" x="152.5" y="301" width="70" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="GUn-Zj-LEL" secondAttribute="height" multiplier="12:11" id="24h-LF-7G1"/>
+                                    <constraint firstAttribute="width" constant="70" id="rde-3D-Fp8"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="cRD-N7-ebH" appends="YES" id="eWh-KW-lzB"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GUn-Zj-LEL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="KUq-rJ-e6n"/>
+                            <constraint firstItem="GUn-Zj-LEL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hPa-iJ-QY8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="_portrait" destination="GUn-Zj-LEL" id="wkz-IS-Yb0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="cRD-N7-ebH">
+                    <connections>
+                        <action selector="panCard:" destination="BYZ-38-t0r" id="yQl-rb-c6Q"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="portrait" width="64" height="55"/>
+    </resources>
+</document>
